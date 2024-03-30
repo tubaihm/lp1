@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+/* ページ全体のスタイル ----------*/
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    line-height: 1.75;
+    color: #333;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* 部品 ----------*/
+.point,
+.contact,
+.course,
+.cost {
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 auto;
+    width: 91.5%;
+}
+
+/* タイトル */
+.section-title {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.section-title span {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #F11F8D;
+}
+
+/* ボタン */
+
+
+/* ヘッダー ----------*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.375rem;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* ロゴ */
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+/* ハンバーガーボタン */
+.hamburger-button {
+    width: 4.375rem;
+    height: 4.375rem;
+    background-color: #005BAC;
+}
+
+
+/* ハンバーガーメニュー */
+@media(max-width:767.9px) {
+    .hamburger-menu {
+        position: fixed;
+        top: 5.375rem;
+        right: 0.5rem;
+        left: 0.5rem;
+        background-color: #0079f2;
+        border-radius: 2rem;
+        transition: opacity .3s linear;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+/* cover---------- */
+.cover-top {
+    height: auto;
+    position: relative;
+    top: 4.4375rem;
+}
+
+.cover-top-block {
+    position: absolute;
+    top: 2.125rem;
+    display: flex;
+    flex-direction: row;
+    max-width: 9.2031rem;
+}
+
+.cover-catch {
+    position: absolute;
+    bottom: 2.1688rem;
+}
+
+.cover-bottom {
+    margin-top: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cover-bottom a {
+    width: 15.625rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-radius: 1.5625rem;
+}
+
+.cover-bottom a:first-child {
+    background-color: #77CB33;
+}
+
+.cover-bottom a:nth-child(2) {
+    background-color: #F6AA00;
+}
+
+.cover-bottom a:last-child {
+
+    margin-bottom: 0;
+    background-color: #3AC8AD;
+}
+
+
+/* point ---------- */
+.point-list-heading {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #F11F8D;
+}
+
+.point-list-heading span{
+    font-size: 2.25rem;
+}
+
+.point-list-lead{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+
+/* contact ---------- */
+.contact{
+    background-color: rgba(255, 85, 85, 0.1);
+}
