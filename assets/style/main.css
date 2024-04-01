@@ -38,6 +38,7 @@ li {
 
 /* タイトル */
 .section-title {
+    margin: 1rem auto .625rem;
     text-align: center;
     font-size: 1.75rem;
     font-weight: 700;
@@ -51,6 +52,20 @@ li {
 }
 
 /* ボタン */
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 19.0625rem;
+    height: 4.3125rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-radius: 2.1875rem;
+}
+
+.button-blue {
+    background: linear-gradient(to right, #0271E0, #53A2F0);
+}
 
 
 /* ヘッダー ----------*/
@@ -64,13 +79,17 @@ li {
     display: flex;
     justify-content: space-between;
     background-color: #fff;
-    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .125rem .5rem rgba(0, 0, 0, .1);
 }
 
 /* ロゴ */
 .header-logo {
+    position: relative;
     display: flex;
-    align-items: center;
+    line-height: 1;
+    width: 10.4375rem;
+    top: 1.125rem;
+    left: 1rem;
 }
 
 /* ハンバーガーボタン */
@@ -80,48 +99,118 @@ li {
     background-color: #005BAC;
 }
 
+.hamburger-button span {
+    display: block;
+    position: relative;
+    left: 50%;
+    width: 30px;
+    /*線の横幅*/
+    height: 2px;
+    /* 線の高さ*/
+    transform: translateX(-50%);
+    background: #fff;
+    /*線の色*/
+}
+
 
 /* ハンバーガーメニュー */
 @media(max-width:767.9px) {
     .hamburger-menu {
         position: fixed;
-        top: 5.375rem;
-        right: 0.5rem;
-        left: 0.5rem;
-        background-color: #0079f2;
-        border-radius: 2rem;
+        top: 4.4375rem;
+        background-color: #005BAC;
         transition: opacity .3s linear;
         opacity: 0;
         visibility: hidden;
     }
 }
 
+.hamburger-menu-active {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 /* cover---------- */
+.cover {
+    padding-bottom: .0625rem;
+}
+
+.cover .container {
+    width: 100%;
+}
+
 .cover-top {
     height: auto;
     position: relative;
     top: 4.4375rem;
 }
 
+.cover-top img {
+    max-width: none;
+    width: 104%;
+}
+
 .cover-top-block {
     position: absolute;
     top: 2.125rem;
+    left: 1rem;
     display: flex;
     flex-direction: row;
-    max-width: 9.2031rem;
 }
+
+.cover-top-block img {
+    width: 1.5rem;
+    height: 4.25rem;
+}
+
+.cover-top-lead {
+    line-height: 0;
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.cover-top-lead p:first-child {
+    font-size: .6875rem;
+}
+
+.cover-top-lead p:last-child {
+    margin-top: 2.0625rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5625rem;
+    font-weight: 800;
+    font-style: italic;
+    color: #F11F8D;
+}
+
+.cover-top-lead p:last-child span {
+    font-size: 2.25rem;
+}
+
 
 .cover-catch {
     position: absolute;
-    bottom: 2.1688rem;
+    bottom: 2.1875rem;
+    left: 1rem;
+    line-height: 1.46;
+}
+
+.cover-catch p:first-child {
+    font-size: .875rem;
+}
+
+.cover-catch p:last-child {
+    font-size: 1.5625rem;
+    font-weight: 900;
+    color: #005BAC;
 }
 
 .cover-bottom {
-    margin-top: 4.5rem;
+    margin-top: 5.875rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-weight: 700;
 }
 
 .cover-bottom a {
@@ -130,7 +219,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: .75rem;
     border-radius: 1.5625rem;
 }
 
@@ -150,7 +239,13 @@ li {
 
 
 /* point ---------- */
+.point-list-content {
+    margin-bottom: 2.125rem;
+}
+
 .point-list-heading {
+    line-height: 1;
+    margin-top: 1rem;
     font-family: "Poppins", sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
@@ -158,17 +253,103 @@ li {
     color: #F11F8D;
 }
 
-.point-list-heading span{
+.point-list-heading span {
     font-size: 2.25rem;
 }
 
-.point-list-lead{
+.point-list-lead {
+    line-height: 1.4;
+    margin-top: .5rem;
+    margin-bottom: .625rem;
     font-size: 1.25rem;
     font-weight: 700;
 }
 
 
+
 /* contact ---------- */
-.contact{
-    background-color: rgba(255, 85, 85, 0.1);
+.contact {
+    padding-top: 2.375rem;
+    padding-bottom: 1.875rem;
+    text-align: center;
+    background-color: rgba(255, 85, 85, .1);
 }
+
+.contact .container {
+    width: 80%;
+}
+
+.contact a {
+    margin: .625rem auto;
+    background: linear-gradient(to right, #0271E0, #53A2F0);
+}
+
+
+/* course ---------- */
+.course {
+    padding-top: 2.75rem;
+}
+
+.course .container {
+    width: 100%;
+}
+
+.course .section-title {
+    text-indent: 1rem;
+}
+
+/* タブ */
+.st-theme-basic {
+    margin-top: 1rem;
+    border: none;
+}
+
+/* タブナビゲーション */
+.tab.st>.nav {
+    flex-direction: row !important;
+    column-gap: 0.5rem;
+}
+
+.tab.st-theme-basic>.nav {
+    box-shadow: none;
+    height: 4.0625rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.tab.st-theme-basic>.nav .nav-link {
+    width: auto;
+    color: rgba(51, 51, 51, .5);
+    background-color: #F0F0F0;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+
+/* アクティブ状態 */
+.tab.st-theme-basic>.nav .nav-link.active {
+    color: #333 !important;
+    background-color: #F2F9FF;
+}
+
+.tab.st-theme-basic>.nav .nav-link.active::after {
+    background-color: unset !important;
+}
+
+/* タブコンテンツ */
+.tab-content {
+    width: 100%;
+    text-align: center;
+    background-color: #F2F9FF;
+}
+
+.tab.st-theme-basic>.tab-content>.tab-pane {
+    padding: 1.5rem 1.5rem 1.1875rem;
+    margin: 1rem;
+}
+
+
+/* cost ---------- */
+
+
+
+/* フッター ---------- */
