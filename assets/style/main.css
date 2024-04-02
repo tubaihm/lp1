@@ -33,7 +33,6 @@ li {
 
 .container {
     margin: 0 auto;
-    width: 91.5%;
 }
 
 /* タイトル */
@@ -61,6 +60,15 @@ li {
     font-size: 1.25rem;
     font-weight: 700;
     border-radius: 2.1875rem;
+}
+
+.hamburger-nav-button{
+    margin: 1.0625rem auto 2rem;
+    width: 20.9375rem;
+    height: 4.125rem;
+    font-size: 1.125rem;
+    color: #005BAC;
+    background-color: #fff;
 }
 
 .button-blue {
@@ -103,13 +111,18 @@ li {
     display: block;
     position: relative;
     left: 50%;
-    width: 30px;
-    /*線の横幅*/
-    height: 2px;
-    /* 線の高さ*/
+    width: 1.875rem;
+    height: .3125rem;
     transform: translateX(-50%);
-    background: #fff;
-    /*線の色*/
+    background-color: #fff;
+}
+
+.hamburger-button span:first-child {
+    top: -.3125rem;
+}
+
+.hamburger-button span:last-child {
+    top: .375rem;
 }
 
 
@@ -117,9 +130,9 @@ li {
 @media(max-width:767.9px) {
     .hamburger-menu {
         position: fixed;
-        top: 4.4375rem;
+        top: 4.375rem;
+        width: 100%;
         background-color: #005BAC;
-        transition: opacity .3s linear;
         opacity: 0;
         visibility: hidden;
     }
@@ -128,6 +141,42 @@ li {
 .hamburger-menu-active {
     opacity: 1;
     visibility: visible;
+}
+
+.hamburger-menu-list{
+    margin: 0 auto;
+    max-width: 500px;
+    padding: .4375rem .8125rem ;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.hamburger-menu-list li{
+    padding-bottom: .1875rem;
+}
+
+.hamburger-menu-list .bi{
+    font-size: 1.75rem;
+    vertical-align: -.125rem;
+}
+
+.hamburger-menu-list span{
+    padding-left: .3125rem
+}
+
+.hamburger-menu-list li:last-child span{
+    letter-spacing: .25rem;
+}
+
+
+.hamburger-menu-list li::after{
+    content: "";
+    display: block;
+    margin-top: .625rem;
+    margin-left: .4375rem;
+    width:96%;
+    height: .0625rem;
+    background-color: rgba(255, 255, 255, .5);
 }
 
 
@@ -143,12 +192,11 @@ li {
 .cover-top {
     height: auto;
     position: relative;
-    top: 4.4375rem;
+    top: 4.375rem;
 }
 
 .cover-top img {
-    max-width: none;
-    width: 104%;
+    width: 100%;
 }
 
 .cover-top-block {
@@ -167,7 +215,7 @@ li {
 .cover-top-lead {
     line-height: 0;
     text-align: center;
-    margin-top: .5rem;
+    margin-top: .5625rem;
 }
 
 .cover-top-lead p:first-child {
@@ -190,7 +238,7 @@ li {
 
 .cover-catch {
     position: absolute;
-    bottom: 2.1875rem;
+    bottom: 2.125rem;
     left: 1rem;
     line-height: 1.46;
 }
@@ -239,8 +287,20 @@ li {
 
 
 /* point ---------- */
-.point-list-content {
+.point {
+    padding: 0 1rem 2.125rem;
+}
+
+.point .container {
+    max-width: 500px;
+}
+
+.point-list-content:not(:last-child) {
     margin-bottom: 2.125rem;
+}
+
+.point-list-content img {
+    width: 100%;
 }
 
 .point-list-heading {
@@ -288,6 +348,7 @@ li {
 /* course ---------- */
 .course {
     padding-top: 2.75rem;
+    padding-bottom: 4rem;
 }
 
 .course .container {
@@ -307,7 +368,9 @@ li {
 /* タブナビゲーション */
 .tab.st>.nav {
     flex-direction: row !important;
-    column-gap: 0.5rem;
+    column-gap: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .tab.st-theme-basic>.nav {
@@ -324,6 +387,13 @@ li {
     border-radius: 0.5rem 0.5rem 0 0;
 }
 
+.st.st-justified>.nav .nav-link,
+.st.st-justified>.nav>li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* アクティブ状態 */
 .tab.st-theme-basic>.nav .nav-link.active {
@@ -336,20 +406,151 @@ li {
 }
 
 /* タブコンテンツ */
+.st>.tab-content>.tab-pane {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 .tab-content {
+    padding: 1rem .1875rem 0px .1875rem;
     width: 100%;
+    min-height: 1212px;
     text-align: center;
     background-color: #F2F9FF;
 }
 
-.tab.st-theme-basic>.tab-content>.tab-pane {
-    padding: 1.5rem 1.5rem 1.1875rem;
-    margin: 1rem;
+.course-tab-content-item {
+    margin: 0 auto 1.125rem;
+    max-width: 500px;
+}
+
+.course-tab-content-item img {
+    width: 93%;
+}
+
+.course-tab-content-title {
+    margin-left: .375rem;
+    text-align: justify;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.course-tab-content-title .bi {
+    font-size: 1.8125rem;
+    color: #005BAC;
+    vertical-align: -.1875rem;
 }
 
 
-/* cost ---------- */
 
+/* cost ---------- */
+.cost {
+    margin-top: 3.75rem;
+    padding-bottom: 4rem
+}
+
+.cost .section-title {
+    margin-bottom: .9375rem;
+    text-indent: 1.25rem;
+    letter-spacing: .3125rem;
+}
+
+/* 料金表 */
+.cost-table {
+    margin: 0 auto;
+    width: 91.5%;
+    max-width: 500px;
+    border: #CCC solid .1875rem;
+    border-collapse: collapse;
+}
+
+.cost-table th {
+    font-weight: 400;
+}
+
+
+.cost-table-heading {
+    background-color: #F5F5F5;
+}
+
+.cost-table-heading th {
+    padding: 1.125rem;
+}
+
+.cost-table-heading th:last-child {
+    padding-left: .3125rem;
+}
+
+.cost-table-body th,
+.cost-table-body td {
+    border: #CCC solid .0625rem;
+}
+
+.cost-table-body th {
+    width: 34.1%;
+    padding: 1.0938rem;
+}
+
+.cost-table-body tr:last-child th {
+    padding-bottom: .9375rem;
+}
+
+.cost-table-body td {
+    text-align: center;
+    text-indent: -.375rem;
+    color: #F23397;
+}
+
+.cost-table-body tr:last-child td {
+    text-indent: 1rem;
+    padding-top: .125rem;
+}
+
+.cost-table-body td span {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
 
 
 /* フッター ---------- */
+.footer {
+    padding-bottom: 1.875rem;
+    background-color: #DDD;
+}
+
+.footer-nav-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-nav-list-group li {
+    padding: 4rem 1rem 4.1875rem;
+    background-size: cover;
+
+}
+
+.footer-nav-list-group a {
+    font-size: 1.375rem;
+    font-weight: 700;
+}
+
+.qa {
+    background-image: url(/assets/image/footer/qa_sp.jpg);
+}
+
+.search {
+    background-image: url(/assets/image/footer/search_sp.jpg);
+}
+
+/* コピーライト */
+small {
+    font-family: "Poppins", sans-serif;
+    font-size: .8125rem;
+}
+
+.footer p {
+    margin-top: 1.625rem;
+    text-align: center;
+    text-indent: 1rem;
+}
