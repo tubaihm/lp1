@@ -94,7 +94,7 @@ li {
 
 @media (min-width:768px) {
     .hamburger-nav-button {
-        margin-top: 1.25rem;
+        margin-top: 2rem;
         width: 17.625rem;
         height: 3.8125rem;
         font-size: 1.25rem;
@@ -111,6 +111,16 @@ li {
 }
 
 
+/* ホバー時 */
+.transform {
+    overflow: hidden;
+}
+
+.transform img:hover {
+    transform: scale(1.2, 1.2);
+}
+
+
 
 
 /* ヘッダー ----------*/
@@ -121,8 +131,6 @@ li {
     width: 100%;
     height: 4.375rem;
     z-index: 1;
-    display: flex;
-    justify-content: space-between;
     background-color: #fff;
     box-shadow: 0 .125rem .5rem rgba(0, 0, 0, .1);
 }
@@ -130,47 +138,41 @@ li {
 @media (min-width:768px) {
     .header {
         height: 6.3125rem;
+        display: flex;
+        justify-content: unset;
     }
 }
 
-@media (min-width:1500px) {
-    .header {
-        justify-content: space-evenly;
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width:768px) {
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+        display: flex;
+        column-gap: 8.25rem;
     }
 }
+
+
 
 /* ロゴ */
 .header-logo {
-    position: relative;
-    display: flex;
+    margin-left: 1rem;
     line-height: 1;
-    width: 10.4375rem;
-    top: 1.125rem;
-    left: 1rem;
 }
 
 
 @media (min-width:768px) {
     .header-logo {
-        top: 24%;
-        left: 3%;
+        margin-left: 0;
+        width: 15.5rem;
     }
-}
-
-@media (min-width:768px) and (max-width:1199.9px) {
-    .header-logo img {
-        max-width: none;
-        width: 12.0625rem;
-    }
-}
-
-
-@media (min-width:1200px) {
-    .header-logo img {
-        max-width: none;
-        width: 15.0625rem;
-    }
-
 }
 
 /* ハンバーガーボタン */
@@ -219,20 +221,13 @@ li {
 
 @media (min-width:768px) {
     .hamburger-menu {
-        position: relative;
-        right: 2.9%;
         display: flex;
         column-gap: 2rem;
+        align-items: center;
         opacity: 1;
     }
 }
 
-@media (min-width:768px) and (max-width:1099.9px) {
-    .hamburger-menu {
-        right: 0;
-        column-gap: 0;
-    }
-}
 
 
 .hamburger-menu-active {
@@ -252,15 +247,7 @@ li {
     .hamburger-menu-list {
         display: flex;
         column-gap: 2.6875rem;
-        padding-top: 2.125rem;
         font-size: 1.25rem;
-    }
-}
-
-@media (min-width:768px) and (max-width:1099.9px) {
-    .hamburger-menu-list {
-        column-gap: .5rem;
-        font-size: 1rem;
     }
 }
 
@@ -314,7 +301,15 @@ li {
 
 /* cover---------- */
 .cover {
+    padding-top: 4.375rem;
     padding-bottom: .0625rem;
+}
+
+@media (min-width:768px) {
+    .cover {
+        padding-top: 6.375rem;
+    }
+
 }
 
 .cover .container {
@@ -322,40 +317,44 @@ li {
 }
 
 .cover-top {
-    height: auto;
-    position: relative;
-    top: 4.375rem;
+    background-image: url(/assets/image/cover/mainVIsual_sp.jpg);
+    background-size: cover;
+    background-position: top center;
 }
 
 @media (min-width:768px) {
     .cover-top {
-        top: 6.3125rem;
+        background-image: url(/assets/image/cover/mainVIsual_pc.jpg);
     }
 }
 
-.cover-top img {
-    width: 100%;
+.cover-top-container {
+    max-width: 375px;
+    height: 250px;
+    margin: 0 auto;
+    padding-top: 2.125rem;
+    padding-left: 1rem;
+}
+
+@media (min-width:768px) {
+    .cover-top-container {
+        max-width: 1200px;
+        height: 651px;
+        padding-top: 6.5625rem;
+        padding-left: 3.125rem;
+    }
 }
 
 .cover-top-block {
-    position: absolute;
-    bottom: 59%;
-    left: 4.5%;
     display: flex;
     flex-direction: row;
+    margin-bottom: 1.3125rem;
 }
 
-@media (min-width:768px) and (max-width:1799.9px) {
+@media (min-width:768px) {
     .cover-top-block {
-        bottom: 59%;
-        left: 4.5%;
-    }
-}
-
-@media (min-width:1800px) {
-    .cover-top-block {
-        top: 16.2%;
-        left: 21.3%;
+        margin-bottom: 1.875rem;
+        column-gap: 1.25rem;
     }
 }
 
@@ -364,16 +363,9 @@ li {
     height: 4.25rem;
 }
 
-@media (min-width:550px) and (max-width:1499.9px) {
-    .cover-top-block img {
-        width: 2.25rem;
-        height: 6.375rem;
-    }
-}
-
-@media (min-width:1500px) {
-    .cover-top-block img {
-        width: 3.3125rem;
+@media (min-width:768px) {
+    .cover-top-block img{
+        width: 3.2875rem;
         height: 9.375rem;
     }
 }
@@ -384,15 +376,9 @@ li {
     margin-top: .5625rem;
 }
 
-@media (min-width:550px) and (max-width:1499.9px) {
+@media (min-width:768px) {
     .cover-top-lead {
-        margin: 1rem;
-    }
-}
-
-@media (min-width:1500px) {
-    .cover-top-lead {
-        margin: 1.5rem 1.25rem;
+        margin-top: 1.375rem;
     }
 }
 
@@ -400,14 +386,9 @@ li {
     font-size: .6875rem;
 }
 
-@media (min-width:550px) and (max-width:1499.9px) {
+@media (min-width:768px) {
     .cover-top-lead p:first-child {
-        font-size: 1rem;
-    }
-}
-
-@media (min-width:1500px) {
-    .cover-top-lead p:first-child {
+        margin-bottom: 4.1875rem;
         font-size: 1.25rem;
     }
 }
@@ -421,18 +402,10 @@ li {
     color: #F11F8D;
 }
 
-@media (min-width:550px) and (max-width:1499.9px) {
+@media (min-width:768px) {
     .cover-top-lead p:last-child {
-        margin-top: 3.125rem;
-        font-size: 2.25rem;
-    }
-}
-
-@media (min-width:1500px) {
-    .cover-top-lead p:last-child {
-        margin-top: 4.125rem;
-        padding-left: .625rem;
         font-size: 3.375rem;
+        text-indent: .625rem;
     }
 }
 
@@ -440,45 +413,23 @@ li {
     font-size: 2.25rem;
 }
 
-@media (min-width:550px) and (max-width:1499.9px) {
-    .cover-top-lead p:last-child span {
-        font-size: 3.25rem;
-    }
-}
-
-@media (min-width:1500px) {
+@media (min-width:768px) {
     .cover-top-lead p:last-child span {
         font-size: 4.625rem;
     }
 }
 
-
 .cover-catch {
-    position: absolute;
-    bottom: 13.5%;
-    left: 4.5%;
     line-height: 1.46;
-}
-
-@media (min-width:1800px) {
-    .cover-catch {
-        bottom: 21.5%;
-        left: 21.4%;
-    }
 }
 
 .cover-catch p:first-child {
     font-size: .875rem;
 }
 
-@media (min-width:550px) and (max-width:1499.9px) {
+@media (min-width:768px) {
     .cover-catch p:first-child {
-        font-size: 1.25rem;
-    }
-}
-
-@media (min-width:1500px) {
-    .cover-catch p:first-child {
+        margin-bottom: .25rem;
         font-size: 2.0625rem;
     }
 }
@@ -489,22 +440,14 @@ li {
     color: #005BAC;
 }
 
-@media (min-width:550px) and (max-width:1499.9px) {
+@media (min-width:768px) {
     .cover-catch p:last-child {
-        font-size: 2rem;
-    }
-}
-
-@media (min-width:1500px) {
-    .cover-catch p:last-child {
-        margin-top: .375rem;
         font-size: 3.75rem;
-        line-height: 1.42;
     }
 }
 
 .cover-bottom {
-    margin-top: 5.875rem;
+    margin-top: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -514,11 +457,12 @@ li {
 
 @media (min-width:768px) {
     .cover-bottom {
-        margin-top: 4rem;
+        margin-top: -2.375rem;
+        padding: 0 1rem;
         position: relative;
         flex-direction: row;
         justify-content: center;
-        column-gap: 2.5rem;
+        column-gap: 2.1%;
         font-size: 1.5rem;
     }
 }
@@ -760,7 +704,7 @@ li {
 @media (min-width:768px) {
     .st-theme-basic {
         margin: 1.625rem auto;
-        width: 60.5%;
+        max-width: 1160px;
     }
 }
 
@@ -835,7 +779,7 @@ li {
     .st>.tab-content>.tab-pane {
         display: flex;
         flex-wrap: wrap;
-        column-gap: .5625rem;
+        column-gap: .625rem;
     }
 }
 
@@ -851,7 +795,7 @@ li {
     .tab-content {
         padding: 1.25rem;
         padding-right: 1.375rem;
-        min-height: 852px;
+        min-height: 623px;
     }
 }
 
@@ -867,18 +811,19 @@ li {
 @media (min-width:768px) {
     .course-tab-content-item {
         margin: 0 auto 1.75rem;
-        max-width: 800px;
+        max-width: 532px;
+        width: calc((100% - 31px)/2);
     }
 }
 
 .course-tab-content-item img {
     width: 93%;
+    border-radius: .75rem;
 }
 
 @media (min-width:768px) {
     .course-tab-content-item img {
-        margin: 0 .6875rem;
-        width: 96%;
+        width: 100%;
     }
 }
 
@@ -891,7 +836,7 @@ li {
 
 @media (min-width:768px) {
     .course-tab-content-title {
-        margin-left: .25rem;
+        margin-left: -.5rem;
     }
 }
 
@@ -1113,7 +1058,7 @@ li {
 
 @media (min-width:768px) {
     .footer-nav-list-group img {
-        width: 50vw;
+        width: 100%;
     }
 }
 
