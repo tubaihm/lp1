@@ -686,6 +686,19 @@ li {
     width: 80%;
 }
 
+.contact-button{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width:768px) {
+    .contact-button {
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 1.25rem;
+    }
+}
+
 .contact a {
     margin: .625rem auto;
     background: linear-gradient(to right, #0271E0, #53A2F0);
@@ -693,13 +706,14 @@ li {
 
 @media (min-width:768px) {
     .contact a {
-        margin: 1.125rem auto;
-        padding-left: 1.4375rem;
+        margin: 1.125rem 0;
         font-size: 1.5rem;
     }
 }
 
-
+.contact a:nth-child(2){
+    background: linear-gradient(to right, #F6AA00, #F6D600);
+}
 
 
 /* course ---------- */
